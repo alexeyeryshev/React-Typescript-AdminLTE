@@ -1,0 +1,49 @@
+{
+  "name": "react-typescript-adminlte",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aeryshev/React-Typescript-AdminLTE"
+  },
+  "author": "aeryshev",  
+  "license": "MIT",
+  "original-credits": ["admin-lte"],
+  "original-credits-repository": [
+    {
+      "type": "git",
+      "url": "git://github.com/almasaeed2010/AdminLTE.git"
+    }
+  ],
+  "dependencies": {
+    "admin-lte": "latest",
+    "bootstrap": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "copy-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "react-hot-loader": "latest",
+    "style-loader": "latest",
+    "ts-loader": "latest",
+    "tslint": "latest",
+    "url-loader": "latest",
+    "webpack": "latest",
+    "webpack-dashboard": "latest",
+    "webpack-dev-server": "latest",
+    "webpack-merge": "latest",
+    "extract-text-webpack-plugin": "latest"
+  },
+  "scripts": {
+    "start": "export NODE_ENV='development' && webpack-dev-server",
+    "build": "export NODE_ENV='production' && webpack",
+    "tslint": "node_modules/.bin/tslint -t stylish \"app/**/*.+(ts|tsx)?\"; echo 'tslint finished'",
+    "check": "node_modules/.bin/tslint \"app/**/*.+(ts|tsx)?\"; echo $?",
+    "clean": "rm -r node_modules",
+    "bootstrap": "rm -rf node_modules && npm link typescript && npm install --no-optional",
+    "stats": "export NODE_ENV='production' && webpack --profile --json > stats.json"
+  }
+}
